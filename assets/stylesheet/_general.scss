@@ -1,0 +1,133 @@
+/************************** General CSS  **************************/
+html {
+    font-size: 16px;
+}
+body {
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: $primary;
+    color: $text; 
+}
+a {
+    text-decoration: none;
+    color: $text;
+    &:focus {
+        color: green;
+    }
+}
+
+/************ Headings ************/ 
+h1, h2 {
+    font-weight: 700;
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+/************ Grid ************/
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;   
+    //place-items: center; 
+}
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+.justify-self {
+    align-self:stretch
+}
+/*********** Flex ***********/
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/************ Main ************/
+main {
+    padding-top: 5rem;
+}
+/*********** Header ***********/
+.fa-clinic-medical {
+    font-size: 2.5rem;
+}
+.header{
+ul {
+    width: 100%;
+    background-color: $secondary;
+}
+li {
+    padding: 1rem;
+    border: 0.1rem solid $secondary;
+    font-weight: 700;
+}
+}
+
+/*********** Profile Picture ***********/
+.profile-pic {
+    border: 0.2rem solid $text;
+    border-radius: 50%;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+i {
+    font-size: 10rem;
+    color: $secondary;
+}
+/*********** Appointments ***********/
+.content {
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+table, tr {
+    border: 0.2rem solid rgba($text, 0.1);
+}
+table {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+td, th {
+    padding: 2rem 6rem;
+}
+th {
+    font-weight: 600;
+}
+.underline {
+    text-decoration: underline;
+}
+.add-text {
+    display: inline-block;    
+}
+.fa-plus-square {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+/************ Form ************/
+input, label {
+width: 70%;
+display: inline-block;
+font-size: 1.2rem;
+}
+input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+}
+form {
+    border: 2px solid rgba($text, 0.1);
+    padding: 2rem;
+}
+
+
+
+
+
+
