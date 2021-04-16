@@ -4,7 +4,8 @@ let nurse = document.querySelector(".nurse");
 let profile = document.querySelector(".profile");
 let content = document.querySelector(".content");
 let currentUser = document.querySelector(".currentUser");
-currentUser.innerText = admins.find((admin) => admin.code === localStorage.username).name;
+admin = admins.find((admin) => admin.code === localStorage.username)
+currentUser.innerText =admin.name;
 
 doctor.addEventListener('click', handleDoctor);
 patient.addEventListener('click', handlePatient);
@@ -287,19 +288,19 @@ function handleProfile(event) {
     content.append(h2);
      
     let name = document.createElement("p");
-    name.innerText = "Name: " + admins[0].name;
+    name.innerText = "Name: " + admin.name;
 
     let code = document.createElement("p");
-    code.innerText = "Code: " + admins[0].code;
+    code.innerText = "Code: " + admin.code;
 
     let dob = document.createElement("p");
-    dob.innerText = "DOB: " + admins[0].dateOfBirth;
+    dob.innerText = "DOB: " + admin.dateOfBirth;
     
     let gender = document.createElement("p");
-    gender.innerText = "Gender: " + admins[0].gender;
+    gender.innerText = "Gender: " + admin.gender;
 
     let contact = document.createElement("p");
-    contact.innerText = "Contact Number: " + admins[0].contactNumber;
+    contact.innerText = "Contact Number: " + admin.contactNumber;
 
     content.append(name, code, dob, gender, contact);
     

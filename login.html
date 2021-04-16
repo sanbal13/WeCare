@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/stylesheet/login.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>WeCare Login</title>
 </head>
+
 <body>
- <script src="./assets/javascript/data.js"></script>
+    <script src="./assets/javascript/data.js"></script>
     <div class="container">
-    <div class="flex">
-        <div class="login-box flex-50">
-            <form>
-            <h2>Login to WeCare</h2>
-            
-            <div class="input-boxes">
-                <label for="iam">I am a</label>
-                <select name="iam" id="iam">
-                    <option value="admin">Admin</option>
-                    <option value="doctor">Doctor</option>
-                    <option value="patient">Patient</option>
-                </select>
-                <label for="username">My username is</label>
-                <input type="text" placeholder="Name" id="username">
-                <label for="password">My password is</label>
-                <input type="password" id="password"placeholder="Password">                
-            </div>
-                <button class="log-in" type="submit">
-                    Show my Dashboard
-                </button>
-            </form>    
+        <div class="flex">
+            <div class="login-box flex-50">
+                <form>
+                    <h2>Login to WeCare</h2>
+
+                    <div class="input-boxes">
+                        <label for="iam">I am a</label>
+                        <select name="iam" id="iam">
+                            <option value="admin">Admin</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="patient">Patient</option>
+                        </select>
+                        <label for="username">My username is</label>
+                        <input type="text" placeholder="Username" id="username">
+                        <label for="password">My password is</label>
+                        <input type="password" id="password" placeholder="Password">
+                    </div>
+                    <button class="log-in" type="submit">
+                        Show my Dashboard
+                    </button>
+                </form>
             </div>
         </div>
     </div>
-</div>
-<script src="./assets/javascript/login.js"></script>
+    </div>
+    <script src="./assets/javascript/login.js"></script>
 </body>
+
 </html>

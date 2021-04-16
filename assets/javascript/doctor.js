@@ -5,8 +5,8 @@ let lab = document.querySelector(".lab");
 let profile = document.querySelector(".profile");
 let content = document.querySelector(".content");
 let currentUser = document.querySelector(".currentUser");
-currentUser.innerText = doctors.find((doctor) => doctor.code === localStorage.username).name;
-
+let doctor = doctors.find((doctor) => doctor.code === localStorage.username)
+currentUser.innerText = doctor.name;
 
 appointment.addEventListener('click', handleAppointment);
 patient.addEventListener('click', handlePatient);
@@ -26,9 +26,9 @@ function handleAppointment() {
     for(let i = 0; i < 5; i++) {
         let div = document.createElement("div");
         if(i < 2) {
-            div.innerHTML = "<div>" + time + ":00am  </div>" + "<div>" + doctors[0].appointments[i]+"</div>";
+            div.innerHTML = "<div>" + time + ":00am  </div>" + "<div>" + doctor.appointments[i]+"</div>";
         } else {
-            div.innerHTML = "<div>" + (time-12) + ":00pm  </div>" + "<div>" + doctors[0].appointments[i]+"</div>";
+            div.innerHTML = "<div>" + (time-12) + ":00pm  </div>" + "<div>" + doctor.appointments[i]+"</div>";
         }
         let br = document.createElement("br");
         content.append(br, div);
@@ -55,7 +55,7 @@ function handlePatient(event) {
     thead.append(code, name, detail);
     table.append(thead);
     let tbody = document.createElement("tbody");
-    patients.filter((patient) => patient.doctorCode === 'D01').forEach((patient) => {
+    patients.filter((patient) => patient.doctorCode === doctor.code).forEach((patient) => {
         
         let tr = document.createElement("tr");
         let code = document.createElement("td");
@@ -165,25 +165,25 @@ function handleProfile(event) {
     content.append(h2);
      
     let name = document.createElement("p");
-    name.innerText = "Name: " + doctors[0].name;    
+    name.innerText = "Name: " + doctor.name;    
 
     let code = document.createElement("p");
-    code.innerText = "Code: " + doctors[0].code;
+    code.innerText = "Code: " + doctor.code;
 
     let speciality = document.createElement("p");
-    speciality.innerText = "Speciality: " + doctors[0].speciality;
+    speciality.innerText = "Speciality: " + doctor.speciality;
 
     let dob = document.createElement("p");
-    dob.innerText = "DOB: " + doctors[0].dateOfBirth;
+    dob.innerText = "DOB: " + doctor.dateOfBirth;
     
     let gender = document.createElement("p");
-    gender.innerText = "Gender: " + doctors[0].gender;
+    gender.innerText = "Gender: " + doctor.gender;
 
     let contact = document.createElement("p");
-    contact.innerText = "Contact Number: " + doctors[0].contactNumber;
+    contact.innerText = "Contact Number: " + doctor.contactNumber;
 
     let visiting = document.createElement("p");
-    visiting.innerText = "Visiting Hospitals: " + doctors[0].visiting;
+    visiting.innerText = "Visiting Hospitals: " + doctor.visiting;
 
     content.append(name, code, speciality, dob, gender, contact, visiting);
     
